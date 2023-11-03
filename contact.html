@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <meta name="description" content="Onglet Entrepise site web pour fleuriste BloomPetals">
+    <title>Entreprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="entreprise.html">Entreprise</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="search-box">
+                    <input type="text" placeholder="Rechercher...">
+                    <!-- <button type="submit">Rechercher</button> -->
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact">
+
+            <h1>Contact</h1>
+
+            <section class="contact-wrapper">
+
+                <!-- Left contact page -->
+
+                <form class="contact-form" role="form">
+                    <section class="form-group">
+                        <label for="civilité">Civilité:</label>
+                        <select name="civilité" id="civilité">
+                            <option value="">-Civilité-</option>
+                            <option value="Mr">Mr.</option>
+                            <option value="Mme">Mme</option>
+                            <option value="Mlle">Mlle</option>
+                            <option value="N.S.P">N.S.P</option>
+                        </select>
+                    </section>
+                    <section class="form-group">
+                        <article>
+                            <input type="text" class="form-control" id="nom" placeholder="NOM" name="nom" value=""
+                                required>
+                        </article>
+                    </section>
+                    <section class="form-group">
+                        <article>
+                            <input type="text" class="form-control" id="prénom" placeholder="PRENOM" name="prénom" value=""
+                                required>
+                        </article>
+                    </section>
+                    <section class="form-group">
+                        <article>
+                            <input type="text" class="form-control" id="adresse-postale" placeholder="ADRESSE" name="adresse" value=""
+                                required>
+                        </article>
+                    </section>
+                    <section class="form-group">
+                        <article>
+                            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email"
+                                value="" required>
+                        </article>
+                    </section>
+
+                    <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+
+                    <label for="checkbox" class="checkbox-label">
+                        <input id="checkbox" type="checkbox" name="politiques_confidentialite" id="politiques_confidentialite">
+                        <span class="checkmark"></span> J'accepte les politiques de confidentialité de l'entreprise.
+                    </label>
+
+                    <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                        <article class="alt-send-button">
+                            <i></i><span class="send-text">ENVOYER</span>
+                        </article>
+
+                    </button>
+
+                </form>
+
+                <section class="direct-contact-container">
+
+                    <ul class="contact-list">
+                        <li class="list-item"><span class="contact-text place">La Plateforme,Marseille (13002)</span></li>
+
+                        <li class="list-item"><span class="contact-text phone"><a
+                                        href="#" title="Give me a call">04.91.01.02.03</a></span>
+                        </li>
+
+                        <li class="list-item"><span class="contact-text gmail"><a
+                                        href="#" title="Send me an email">bloompetals@gmail.com</a></span></li>
+
+                    </ul>
+                    <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+
+                </section>
+
+            </section>
+
+        </section>
+    </main>
+</body>
