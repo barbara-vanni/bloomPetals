@@ -1,10 +1,11 @@
 @font-face {
-    font-family: Agbalumo;
-    src: url(images/Agbalumo/Agbalumo-Regular.ttf);
+    font-family: Righteous;
+    src: url(images/Righteous/Righteous-Regular.ttf);
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: rgb(234, 231, 221);
+    font-family: Arial, Helvetica, sans-serif;
 
     @media (max-width: 768px) {
         width: 100vw;
@@ -12,44 +13,80 @@ body {
 }
 
 hr {
-    border: 1px solid black;
+    border: 1px solid #99775C;
     width: 100%;
 }
 
 header {
-    background-color: gray;
+    background-color: #99775C;
 }
 
 h1 {
-    font-family: "Agbalumo";
-    font-size: 6vw;
+    font-family: "Righteous";
+    font-size: 10vw;
+    color: #99775C;
 
+}
+
+h2 {
+    font-family: "Righteous";
+    color: #99775C;
+}
+
+p {
+    font-weight: normal;
+}
+
+p>strong {
+    font-weight: bold;
+}
+
+em{
+    font-style: normal;
+    font-family: "Righteous";
+    color: rgb(153, 119, 92);
+    color:  rgb(21, 24, 34);
 }
 
 nav ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0%;
 }
 
 nav li {
+    font-family: "Righteous";
     display: inline;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 5%;
+    font-size: 25px;
+
+    @media (max-width: 1047px) {
+        font-size: 15px;
+        margin-left: 20px;
+        margin-right: 2%;
+    }
+
+}
+
+.search-box {
+    font-family: "Righteous";
+    max-width: 15%;
 
     @media (max-width: 768px) {
-        display: flex;
-        flex-direction: inline;
+        max-width: 15%;
     }
+
 }
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: #EAE7DD;
     font-weight: bold;
 }
 
 main {
-    background-color: white;
+    background-color: #EAE7DD;
     margin-left: 50px;
     margin-right: 50px;
     text-align: center;
@@ -73,7 +110,7 @@ main {
     justify-content: space-evenly;
 
     @media (max-width: 768px) {
-        width: 100%;
+        width: 70%;
     }
 
 }
@@ -103,6 +140,14 @@ main {
     font-size: 90%;
 }
 
+.readmore {
+    font-family: "Righteous";
+    color: #99775C;
+    text-decoration: none;
+
+}
+
+
 .image-grid {
     display: flex;
     justify-content: space-evenly;
@@ -121,14 +166,17 @@ img {
     border-color: black;
 }
 
-
 .footer {
-    background-color: gray;
+    background-color: #99775C;
     height: 100px;
 }
 
 
 /* ENTREPRISE */
+
+.name {
+    color: white;
+}
 
 .ourteam {
     display: flex;
@@ -188,11 +236,6 @@ img {
     -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
     transform: translateX(50%) rotate(-60deg) skewY(30deg);
 
-    @media (max-width: 768px) {
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-        transform: translateY(40%) rotate(-60deg) skewY(30deg);
-    }
 
 }
 
@@ -212,20 +255,12 @@ img {
     height: 100%;
     text-align: center;
     color: #fff;
-    background-color: black;
+    background-color: #99775C;
     overflow: hidden;
 
     -webkit-transform: skewY(-30deg) rotate(60deg);
     -ms-transform: skewY(-30deg) rotate(60deg);
     transform: skewY(-30deg) rotate(60deg);
-
-    @media (max-width: 768px) {
-        width: 80%;
-        height: 80%;
-        border-radius: 50%;
-        display: flex;
-        margin-left: 20%;;
-    }
 
 }
 
@@ -277,28 +312,6 @@ img {
     padding-bottom: 50%;
 }
 
-@media (max-width: 768px) {
-    #team li {
-        float: none;
-        border-radius: 50%;
-        width: 100%;
-        padding-bottom: 100%;
-        display: flex;
-        justify-content: space-evenly;
-
-    }
-
-    li .pusher {
-        display: none;
-    }
-
-    #team li:nth-child(3n+2) {
-        margin: 2% auto;
-    }
-
-}
-
-
 /* HOVER EFFECT  */
 
 #team li div:hover h1 {
@@ -306,7 +319,7 @@ img {
     padding-bottom: 10%;
 
     @media (max-width: 768px) {
-        font-size: 100%;
+        font-size: 60%;
     }
 }
 
@@ -319,6 +332,10 @@ img {
 #team li div:hover p {
     top: 50%;
     padding-top: 10%;
+
+    @media (max-width: 768px) {
+        font-size: 50%;
+    }
 }
 
 
@@ -328,6 +345,7 @@ img {
     display: flex;
     justify-content: space-evenly;
     margin: 5%;
+
     @media (max-width: 1252px) {
         display: flex;
         flex-direction: column;
@@ -342,8 +360,9 @@ img {
     display: grid;
     grid: auto-flow var(--s)/repeat(2, var(--s));
     gap: var(--g);
+
     @media (max-width: 768px) {
-        --s:300px;
+        --s: 300px;
     }
 }
 
@@ -426,9 +445,14 @@ textarea {
     letter-spacing: 1px;
 }
 
+#checkbox {
+    max-width: 20px;
+    overflow: hidden;
+}
+
 .checkbox-label {
     display: flex;
-    align-items:center;
+    align-items: center;
     cursor: pointer;
     user-select: none;
 }
